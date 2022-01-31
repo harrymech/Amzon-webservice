@@ -19,11 +19,11 @@ public class LoginPage {
 	 
 	 @FindBy(name="uid")
 	 @CacheLookup
-	 WebElement txtUserName;
+	private WebElement txtUserName;
 	 
 	 @FindBy(name="password")
 	 @CacheLookup
-	 WebElement txtPassword;
+	private WebElement txtPassword;
 	 
 	 @FindBy(name="btnLogin")
 	 @CacheLookup

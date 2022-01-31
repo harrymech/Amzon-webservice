@@ -1,0 +1,11 @@
+name: Failed suite [Suite]
+configFailurePolicy: skip
+tests:
+  - name: Test(failed)
+  classes:
+    - name: com.inetBanking.testCases.TC_LoginTest_001
+      includedMethods:
+        - name: setup
+        - name: tearDown
+        - name: loginTest
+

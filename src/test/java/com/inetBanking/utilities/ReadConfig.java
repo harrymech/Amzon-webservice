@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ReadConfig {
 	
-	Properties pro;
+	static Properties pro;
 	
 	public ReadConfig()
 	{
@@ -27,7 +27,7 @@ public class ReadConfig {
 		return url;
 	}
 	
-	public String getUserName()
+	public static String getUserName()
 	{
 		String username = pro.getProperty("userName");
 		return username;

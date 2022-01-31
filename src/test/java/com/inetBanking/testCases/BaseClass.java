@@ -15,8 +15,8 @@ public class BaseClass {
 	
 	ReadConfig readconfig = new ReadConfig();
 	public String baseUrl =readconfig.getApplicationURL();
-	public String userName = readconfig.getUserName();
-	public String password = readconfig.getPassword();
+	public String userName = ReadConfig.getUserName();
+	public String password = ReadConfig.getPassword();
 	public static WebDriver driver;
 	public static Logger logger;
 	
@@ -25,7 +25,7 @@ public class BaseClass {
 	public void setup(String br) {
 	
 		logger = Logger.getLogger("ebanking");
-		PropertyConfigurator.configure("log4j.properties");
+		PropertyConfigurator.configure("log4j2.properties");
 		
 		if(br.equals("chrome")) 
 		{
@@ -36,6 +36,7 @@ public class BaseClass {
 				System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxPath());
 				driver= new FirefoxDriver();
 			}
+		
 		driver.get(baseUrl);
 		
 	}
